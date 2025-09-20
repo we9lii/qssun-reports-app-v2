@@ -4,13 +4,6 @@
 <dict>
     <key>method</key>
     <string>app-store</string>
-    <key>provisioningProfiles</key>
-    <dict>
-        <key>com.qssun.reports</key>
-        <string>Qssun Reports Beta Distribution</string>
-    </dict>
-    <key>signingStyle</key>
-    <string>manual</string>
     <key>teamID</key>
     <string>YOUR_TEAM_ID</string>
     <key>uploadBitcode</key>
