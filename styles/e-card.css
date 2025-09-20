@@ -1,0 +1,793 @@
+/* Quote Card Styles - Redesigned to match Login Screen */
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 220px; /* تصغير أكثر لتناسق أفضل */
+    background: white;
+    border-radius: 12px;
+    padding: 18px; /* تحسين التوازن */
+    margin: 6px; /* تقليل المسافات بين المربعات */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: #334155;
+}
+
+.dark .card {
+    background: #334155;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.dark .card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #f59e0b, #fbbf24);
+    border-radius: 12px 12px 0 0;
+}
+
+.card-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dark .card-name {
+    color: #94a3b8;
+}
+
+.quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px; /* تصغير من 16px إلى 12px */
+}
+
+.quote svg {
+    color: #64748b;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.dark .quote svg {
+    color: #94a3b8;
+}
+
+.body-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #334155;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.dark .body-text {
+    color: #e2e8f0;
+}
+
+.author {
+    font-size: 14px;
+    color: #64748b;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dark .author {
+    color: #94a3b8;
+}
+
+.author span {
+    font-size: 12px; /* تصغير من 14px إلى 12px */
+    opacity: 0.7;
+}
+
+.author svg {
+    color: #ff6b6b;
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+/* Service Cards - Clean Design matching Login Screen */
+.card.sales {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: #334155;
+    position: relative;
+}
+
+.dark .card.sales {
+    background: #334155;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+}
+
+.card.sales::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 12px 12px 0 0;
+    z-index: 1;
+}
+
+.card.sales .card-name {
+    position: relative;
+    z-index: 2;
+    color: #3b82f6;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.card.maintenance {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: #334155;
+    position: relative;
+}
+
+.dark .card.maintenance {
+    background: #334155;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+}
+
+.card.maintenance::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    border-radius: 12px 12px 0 0;
+    z-index: 1;
+}
+
+.card.maintenance .card-name {
+    position: relative;
+    z-index: 2;
+    color: #10b981;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.card.projects {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: #334155;
+    position: relative;
+}
+
+.dark .card.projects {
+    background: #334155;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+}
+
+.card.projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    border-radius: 12px 12px 0 0;
+    z-index: 1;
+}
+
+.card.projects .card-name {
+    position: relative;
+    z-index: 2;
+    color: #f97316;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.card.log {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: #334155;
+    position: relative;
+}
+
+.dark .card.log {
+    background: #334155;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.card.log::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    border-radius: 12px 12px 0 0;
+    z-index: 1;
+}
+
+.card.log .card-name {
+    position: relative;
+    z-index: 2;
+    color: #06b6d4;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.card.workflow {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: #334155;
+    position: relative;
+}
+
+.dark .card.workflow {
+    background: #334155;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.card.workflow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    border-radius: 12px 12px 0 0;
+    z-index: 1;
+}
+
+.card.workflow .card-name {
+    position: relative;
+    z-index: 2;
+    color: #8b5cf6;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.card.profile {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: #334155;
+    position: relative;
+}
+
+.dark .card.profile {
+    background: #334155;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.card.profile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    border-radius: 12px 12px 0 0;
+    z-index: 1;
+}
+
+.card.profile .card-name {
+    position: relative;
+    z-index: 2;
+    color: #ef4444;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+/* Transparent Slice Button Effect */
+.slice {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 16px 24px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #1e293b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark .slice {
+    color: white;
+}
+
+.slice::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.slice:hover::before {
+    left: 100%;
+}
+
+.slice:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.slice .text {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.slice:hover .text {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Dark mode adjustments for slice effect */
+.dark .slice {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+}
+
+.dark .slice:hover {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Enhanced E-Card Styles */
+.e-card {
+    position: relative;
+    width: 100%;
+    max-width: 480px; /* تكبير المربعات للمبيعات والصيانة */
+    height: 520px; /* تكبير الارتفاع للمربعات */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 12px auto; /* تقليل المسافات */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: cardEntrance 0.8s ease-out;
+    cursor: pointer;
+    color: #1e293b;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.dark .e-card {
+    color: #e8e8e8;
+}
+
+.e-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.e-card:focus {
+    outline: none;
+}
+
+.e-card:active {
+    scale: 0.95;
+}
+
+.e-card .image {
+    width: 120px; /* تصغير للتناسق */
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    margin: 30px auto 20px; /* تقليل المسافات */
+    display: block;
+    object-fit: cover;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.e-card:hover .image {
+    transform: scale(1.1) rotate(5deg);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.e-card .infotop {
+    text-align: center;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
+    color: #1e293b;
+}
+
+.dark .e-card .infotop {
+    color: white;
+}
+
+.e-card:hover .infotop {
+    transform: translateY(-5px);
+}
+
+.e-card .infotop .icon {
+    width: 60px; /* تصغير للتناسق */
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto; /* تقليل المسافات */
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: iconFloat 3s ease-in-out infinite, iconGlow 2s ease-in-out infinite alternate;
+    color: #1e293b;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.dark .e-card .infotop .icon {
+    color: white;
+}
+
+.e-card:hover .infotop .icon {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+    animation: iconBounce 0.6s ease-in-out, iconGlow 1s ease-in-out infinite alternate;
+}
+
+.e-card .infotop .service-title {
+    font-size: 16px; /* تصغير للتناسق */
+    font-weight: 600;
+    margin: 12px 0; /* تقليل المسافات */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+    transition: all 0.3s ease;
+    color: #1e293b;
+}
+
+.dark .e-card .infotop .service-title {
+    color: white;
+}
+
+.e-card:hover .infotop .service-title {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
+.e-card .infotop .name {
+    font-size: 14px; /* تصغير للتناسق */
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    color: #334155;
+    font-weight: 500;
+}
+
+.dark .e-card .infotop .name {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.e-card:hover .infotop .name {
+    color: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+.e-card .description {
+    font-size: 14px; /* تصغير للتناسق */
+    color: #334155;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 20px; /* تقليل المسافات */
+    transition: all 0.3s ease;
+}
+
+.dark .e-card .description {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.e-card:hover .description {
+    color: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+/* Animated Background Waves */
+.e-card .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='rgba(30,41,59,0.1)'/%3E%3C/svg%3E") repeat-x;
+    animation: wave 10s linear infinite;
+}
+
+.dark .e-card .wave {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='rgba(255,255,255,0.1)'/%3E%3C/svg%3E") repeat-x;
+}
+
+.e-card .wave:nth-child(2) {
+    bottom: 10px;
+    animation: wave 7s linear infinite reverse;
+    opacity: 0.5;
+}
+
+.e-card .wave:nth-child(3) {
+    bottom: 15px;
+    animation: wave 20s linear infinite;
+    opacity: 0.2;
+}
+
+/* Floating Particles */
+.e-card .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.e-card .particles::before,
+.e-card .particles::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(30, 41, 59, 0.6);
+    border-radius: 50%;
+    animation: particles 8s linear infinite;
+}
+
+.dark .e-card .particles::before,
+.dark .e-card .particles::after {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.e-card .particles::before {
+    top: 20%;
+    left: 20%;
+    animation-delay: -2s;
+}
+
+.e-card .particles::after {
+    top: 60%;
+    right: 20%;
+    animation-delay: -4s;
+}
+
+/* Keyframe Animations */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes cardEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes cardPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(30, 41, 59, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(30, 41, 59, 0);
+    }
+}
+
+.dark @keyframes cardPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1200px);
+    }
+}
+
+@keyframes particles {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes soundWave {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.5);
+    }
+}
+
+/* أنيميشن جديد للأيقونات */
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes iconGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(30, 41, 59, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(30, 41, 59, 0.6), 0 0 30px rgba(30, 41, 59, 0.4);
+    }
+}
+
+.dark @keyframes iconGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes iconBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) scale(1.15) rotate(10deg);
+    }
+    40% {
+        transform: translateY(-10px) scale(1.2) rotate(15deg);
+    }
+    60% {
+        transform: translateY(-5px) scale(1.18) rotate(12deg);
+    }
+}
+
+/* Dark mode adjustments */
+.dark .e-card {
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.dark .e-card:hover {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .e-card {
+        background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .e-card:hover {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* تحسين الشبكة للتناسق */
+@media (max-width: 768px) {
+    .card {
+        max-width: 200px;
+        padding: 14px;
+        margin: 4px;
+    }
+    
+    .e-card {
+        max-width: 320px;
+        height: 380px;
+        margin: 8px auto;
+    }
+    
+    .e-card .image {
+        width: 100px;
+        height: 100px;
+        margin: 20px auto 15px;
+    }
+    
+    .e-card .infotop .icon {
+        width: 50px;
+        height: 50px;
+        margin: 15px auto;
+    }
+}
+
+.author svg {
+    display: none; /* إخفاء القلب تماماً */
+}
